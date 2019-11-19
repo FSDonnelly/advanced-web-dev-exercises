@@ -54,13 +54,13 @@ div {
 }
 
 .animated {
-  transition-property: background-color scale;
-  transition-duration: 1s;
+  transition-property: background-color, border-radius;
+  transition-duration: 1s, 5s;
 }
 
 .box:hover {
   background-color: lightgreen;
   transform-origin: top left;
   transform: scale(2);
-  opacity: 0.5;
+  border-radius: 50px;
 }
