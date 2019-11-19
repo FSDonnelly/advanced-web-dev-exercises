@@ -11,9 +11,30 @@ p {
 
 .move-down {
   background-color: #f1c40f;
-  transform: translateY(100px);
+  transform: translateY(20px);
 }
 
 p:hover {
   transform: translate(20px, 20px);
+}
+
+div {
+  margin-top: 25px;
+  width: 50px;
+  height: 50px;
+  background-color: #3498db;
+  color: #ecf0f1;
+  border: 2px solid #2c3e50;
+}
+
+.transform-scale {
+  transform: scale(2);
+}
+
+.transform-scaleX {
+  transform: scaleX(4);
+}
+
+.transform-scaleY {
+  transform: scaleY(3);
 }
