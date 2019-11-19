@@ -38,5 +38,6 @@ div {
 
 .rotate:hover {
   background-color: #9b59b6;
-  transform: rotate(90deg);
+  transform: rotate(45deg);
+  transform-origin: left top;
 }
