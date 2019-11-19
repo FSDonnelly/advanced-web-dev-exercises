@@ -35,3 +35,8 @@ div {
 .transform-scaleY:hover {
   transform: scaleY(3);
 }
+
+.rotate:hover {
+  background-color: #9b59b6;
+  transform: rotate(90deg);
+}
