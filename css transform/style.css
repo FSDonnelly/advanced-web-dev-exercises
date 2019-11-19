@@ -41,3 +41,26 @@ div {
   transform: rotate(45deg);
   transform-origin: left top;
 }
+
+.box {
+  background: #9b59b6;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  border-radius: 20px;
+}
+
+.animated {
+  transition-property: background-color scale;
+  transition-duration: 1s;
+}
+
+.box:hover {
+  background-color: lightgreen;
+  transform-origin: top left;
+  transform: scale(2);
+  opacity: 0.5;
+}
