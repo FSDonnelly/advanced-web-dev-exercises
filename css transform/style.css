@@ -69,6 +69,7 @@ div {
 .box:hover {
   transform: translateX(300px);
   background-color: teal;
+  border-radius: 50px;
 }
 
 .animated {
@@ -80,5 +81,6 @@ div {
   /* transition-timing-function: ease-out; */
   /* transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition-delay: 1s; */
-  transition: transform 2s ease-out 1s, background-color 0.5s linear;
+  transition: transform 2s ease-out 1s, background-color 0.5s linear,
+    border-radius 3s ease-in 3s;
 }
