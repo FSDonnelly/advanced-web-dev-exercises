@@ -2,7 +2,6 @@
 body {
   width: 100%;
   margin: 0;
-  overflow: hidden;
   padding: 0;
   background: #2c3e50;
 }
@@ -59,7 +58,6 @@ a {
   animation-iteration-count: infinite;
   animation-delay: 0;
   animation-duration: 2s;
-  animation-play-state: paused;
 }
 
 .box:hover {
@@ -72,6 +70,43 @@ a {
 
 .reverse {
   animation-direction: reverse;
+}
+
+.fill {
+  background: #2ecc71;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  border-radius: 20px;
+}
+
+.fill:hover {
+  animation-name: changecolor;
+  animation-delay: 2s;
+  animation-duration: 3s;
+}
+
+.front {
+  animation-fill-mode: forwards;
+}
+
+.back {
+  animation-fill-mode: backwards;
+}
+
+.both {
+  animation-fill-mode: both;
+}
+
+@keyframes changecolor {
+  0% {
+    background-color: #f1c40f;
+  }
+  100% {
+    background-color: #e74c3c;
+  }
 }
 
 @keyframes slideRight {
