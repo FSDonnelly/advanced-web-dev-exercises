@@ -38,6 +38,48 @@ a {
   animation-iteration-count: infinite;
 }
 
+.rainbow {
+  animation-name: rainbowtext;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+.box {
+  background: #9b59b6;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  border-radius: 20px;
+  animation-name: slideRight;
+  animation-iteration-count: infinite;
+  animation-delay: 0;
+  animation-duration: 2s;
+  animation-play-state: paused;
+}
+
+.box:hover {
+  animation-play-state: running;
+}
+
+.alternate {
+  animation-direction: alternate;
+}
+
+.reverse {
+  animation-direction: reverse;
+}
+
+@keyframes slideRight {
+  100% {
+    transform: translateX(500px);
+  }
+}
+
 @keyframes jiggle {
   48%,
   62% {
@@ -73,12 +115,4 @@ a {
     color: blue;
     font-size: 20px;
   }
-}
-
-.rainbow {
-  animation-name: rainbowtext;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
 }
