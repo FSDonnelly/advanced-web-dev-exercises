@@ -61,7 +61,7 @@ a {
 }
 
 .box:hover {
-  animation-play-state: running;
+  animation-play-state: paused;
 }
 
 .alternate {
