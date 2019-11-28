@@ -11,6 +11,7 @@
   animation-iteration-count: infinite;
   animation-delay: 0;
   animation-duration: 2s; */
+  /* First time to be parsed is duration 2nd time is delay */
   animation: slideRight 2s ease-in infinite 2s alternate-reverse;
 }
 
