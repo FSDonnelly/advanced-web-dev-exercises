@@ -39,12 +39,33 @@ h2 {
   border-top-color: #1abc9c;
   border-bottom-color: #3498db;
   border-radius: 50%;
-  animation: spin 2s linear infinite;
+  animation: coloredspin 2s linear infinite;
 }
 
 @keyframes spin {
   0% {
     transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes coloredspin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    border-top-color: #2ecc71;
+    border-bottom-color: #2ecc71;
+  }
+  50% {
+    border-top-color: purple;
+    border-bottom-color: purple;
+  }
+  75% {
+    border-top-color: #3498db;
+    border-bottom-color: #3498db;
   }
   100% {
     transform: rotate(360deg);
