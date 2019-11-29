@@ -14,6 +14,7 @@ h2 {
 
 h1 {
   font-size: 80px;
+  margin: 20px;
   animation: appear 1s linear;
 }
 
@@ -24,6 +25,9 @@ p {
 
 h2 {
   font-size: 36px;
+  opacity: 0;
+  margin: 2em;
+  animation: appear 1s 3s forwards;
 }
 
 .container {
@@ -74,5 +78,14 @@ h2 {
     transform: rotate(720deg) scale(1);
     border-top-color: #1abc9c;
     border-bottom-color: #1abc9c;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
