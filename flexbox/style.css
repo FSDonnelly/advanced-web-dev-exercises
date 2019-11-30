@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+}
+
+.box-1 {
+  color: white;
+  background: red;
+}
+
+.box-2 {
+  color: white;
+  background: darkorange;
+}
+
+.box-3 {
+  color: white;
+  background: orange;
+}
+
+.box-4 {
+  color: white;
+  background: yellow;
+}
