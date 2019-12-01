@@ -45,4 +45,5 @@
   display: flex;
   border: 20px solid black;
   height: 90vh;
+  flex-direction: column;
 }
