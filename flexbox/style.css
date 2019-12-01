@@ -45,5 +45,5 @@
   display: flex;
   border: 20px solid black;
   height: 90vh;
-  flex-direction: column-reverse;
+  flex-direction: row-reverse;
 }
