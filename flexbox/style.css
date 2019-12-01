@@ -9,6 +9,7 @@
   font-family: lato;
   font-weight: 300;
   box-sizing: border-box;
+  width: 300px;
 }
 
 .box-1 {
@@ -45,5 +46,7 @@
   display: flex;
   border: 20px solid black;
   height: 90vh;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
 }
