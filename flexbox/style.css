@@ -9,7 +9,7 @@
   font-family: lato;
   font-weight: 300;
   box-sizing: border-box;
-  width: 300px;
+  width: 100px;
 }
 
 .box-1 {
@@ -45,11 +45,12 @@
 .container {
   display: flex;
   border: 20px solid black;
-  height: 90vh;
+  /* height: 90vh; */
   /* row-reverse flips on main axis (right to left) */
   /* flex-direction: column; */
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
   /* wrap-reverse flips on cross axis (bottom to top) */
-  flex-wrap: wrap-reverse;
+  /* flex-wrap: wrap-reverse; */
+  justify-content: space-between;
 }
