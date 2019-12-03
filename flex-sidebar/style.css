@@ -13,17 +13,15 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 10px;
 }
 
 .item {
   color: white;
   font-size: 20px;
+  margin: 10px;
 }
 
-/* .top {
-  justify-content: flex-start;
+.section {
+  justify-content: space-evenly;
 }
-
-.bottom {
-  justify-content: flex-end;
-} */
