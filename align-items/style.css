@@ -46,4 +46,5 @@
   display: flex;
   border: 20px solid black;
   height: 800px;
+  align-items: flex-start;
 }
