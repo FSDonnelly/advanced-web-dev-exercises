@@ -51,5 +51,6 @@
   border: 20px solid black;
   height: 800px;
   /* align-items: flex-start; */
-  align-items: flex-end;
+  /* align-items: flex-end; */
+  align-items: center;
 }
