@@ -9,7 +9,7 @@
   font-family: lato;
   font-weight: 300;
   box-sizing: border-box;
-  width: 100px;
+  width: 300px;
 }
 
 .box-1 {
@@ -49,7 +49,7 @@
 .container {
   display: flex;
   border: 20px solid black;
-  height: 800px;
+  height: 100vh;
   /* align-items: flex-end; */
   /* flex-direction: column; */
   /* align-items: flex-end; */
