@@ -53,4 +53,5 @@
   /* align-items: flex-start; */
   /* align-items: flex-end; */
   align-items: center;
+  justify-content: center;
 }
