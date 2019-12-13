@@ -2,7 +2,7 @@
   border: 20px solid black;
   height: 100vh;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
 }
 
@@ -27,7 +27,7 @@
 }
 .box-3 {
   background: #f0a30a;
-  align-self: center;
+  align-self: flex-start;
 }
 .box-4 {
   background: #e3c800;
