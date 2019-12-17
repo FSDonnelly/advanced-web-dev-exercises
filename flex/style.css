@@ -1,0 +1,34 @@
+/* APPEARANCE STYLES*/
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+
+.box {
+  font-size: 100px;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-family: lato;
+  font-weight: 300;
+  box-sizing: border-box;
+}
+
+.box-1 {
+  background: #e51400;
+}
+
+.box-2 {
+  background: #fa6800;
+}
+
+.box-3 {
+  background: #f0a90a;
+}
+
+.box-4 {
+  background: #e3c800;
+}
+
+.container {
+  display: flex;
+  border: 2px solid black;
+  flex-direction: row;
+}
