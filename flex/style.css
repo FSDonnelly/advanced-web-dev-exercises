@@ -1,3 +1,4 @@
+/* Article on flex-basis at gedd.ski/post/the-difference-between-width-and-flex-basis */
 /* APPEARANCE STYLES*/
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
 
@@ -9,7 +10,8 @@
   font-family: lato;
   font-weight: 300;
   box-sizing: border-box;
-  flex-basis: 300px;
+  height: 100px;
+  flex-basis: 150px;
 }
 
 .box-1 {
@@ -22,7 +24,6 @@
 
 .box-3 {
   background: #f0a90a;
-  flex-basis: 100px;
 }
 
 .box-4 {
@@ -32,5 +33,6 @@
 .container {
   display: flex;
   border: 2px solid black;
-  flex-direction: row;
+  flex-direction: column;
+  height: 80vh;
 }
