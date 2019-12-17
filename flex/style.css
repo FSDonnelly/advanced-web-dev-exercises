@@ -9,6 +9,7 @@
   font-family: lato;
   font-weight: 300;
   box-sizing: border-box;
+  flex-basis: 300px;
 }
 
 .box-1 {
@@ -21,6 +22,7 @@
 
 .box-3 {
   background: #f0a90a;
+  flex-basis: 100px;
 }
 
 .box-4 {
