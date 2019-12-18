@@ -34,6 +34,7 @@
 .box-4 {
   background: #e3c800;
   /* flex-grow: 4; */
+  flex-shrink: 2;
 }
 
 .container {
