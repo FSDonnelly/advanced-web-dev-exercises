@@ -11,7 +11,7 @@
   font-family: lato;
   font-weight: 300;
   box-sizing: border-box;
-  flex: 1 0 200px;
+  flex: 1 1 200px;
   /* height: 100px; */
   /* flex-basis: 350px; */
   /* flex-grow: 1; */
@@ -25,7 +25,7 @@
 
 .box-2 {
   background: #fa6800;
-  /* flex-shrink: 1; */
+  flex: 2 1 500px;
 }
 
 .box-3 {
