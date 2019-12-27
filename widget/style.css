@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+}
+
+.box {
+  background: #cc0042;
+}
+
+.middle {
+  background: #b20039;
+}
