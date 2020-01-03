@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+}
+
+header,
+footer {
+  background: blue;
+}
+
+article {
+  flex-basis: 60%;
+  background: red;
+}
+
+nav {
+  flex-basis: 20%;
+  background: orange;
+}
+
+aside {
+  flex-basis: 20%;
+  background: yellow;
+}
+
+main {
+  display: flex;
+}
