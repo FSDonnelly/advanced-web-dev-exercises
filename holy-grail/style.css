@@ -10,11 +10,6 @@ main {
   height: 800vh;
 }
 
-header,
-footer {
-  background: blue;
-}
-
 article {
   flex-basis: 60%;
   background: red;
@@ -29,4 +24,10 @@ nav {
 aside {
   flex-basis: 20%;
   background: yellow;
+}
+
+header,
+footer {
+  background: blue;
+  flex-basis: 100px;
 }
