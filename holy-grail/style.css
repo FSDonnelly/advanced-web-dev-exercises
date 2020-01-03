@@ -5,6 +5,11 @@ body {
   min-height: 100vh;
 }
 
+main {
+  display: flex;
+  height: 800vh;
+}
+
 header,
 footer {
   background: blue;
@@ -18,13 +23,10 @@ article {
 nav {
   flex-basis: 20%;
   background: orange;
+  order: -1;
 }
 
 aside {
   flex-basis: 20%;
   background: yellow;
-}
-
-main {
-  display: flex;
 }
