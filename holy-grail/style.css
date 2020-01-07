@@ -15,6 +15,14 @@ header a {
   text-decoration: none;
 }
 
+main > *,
+header,
+footer {
+  margin: 4px;
+  padding: 5px;
+  border-radius: 7px;
+}
+
 main {
   display: flex;
   height: 80vh;
@@ -24,14 +32,14 @@ article {
   flex: 4 0 60%;
   /* flex-basis: 60%; */
   /* flex-grow: 4; */
-  background: red;
+  background: #ecf0f1;
 }
 
 nav {
   flex: 1 1 20%;
   /* flex-basis: 20%; */
   /* flex-grow: 1; */
-  background: orange;
+  background: #95a5a6;
   order: -1;
 }
 
@@ -39,7 +47,7 @@ aside {
   flex: 1 1 20%;
   /* flex-basis: 20%; */
   /* flex-grow: 1; */
-  background: yellow;
+  background: #3498db;
 }
 
 header,
