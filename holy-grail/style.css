@@ -7,11 +7,12 @@ body {
 
 main {
   display: flex;
-  height: 800vh;
+  height: 80vh;
 }
 
 article {
   flex-basis: 60%;
+  flex-grow: 1;
   background: red;
 }
 
@@ -30,4 +31,10 @@ header,
 footer {
   background: blue;
   flex-basis: 100px;
+}
+
+@media all and (max-width: 640px) {
+  main {
+    flex-direction: column;
+  }
 }
