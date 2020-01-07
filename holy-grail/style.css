@@ -51,6 +51,7 @@ footer {
 @media all and (max-width: 640px) {
   main {
     flex-direction: column;
+    flex-grow: 1;
   }
   nav {
     order: 0;
