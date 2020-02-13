@@ -30,3 +30,14 @@ p3.then(function(res) {
 }).catch(function(error) {
   console.log(`Error: ${error}`);
 });
+
+let promise = new Promise(function(res, rej) {
+  setTimeout(function() {
+    let randomInt = Math.floor(Math.random() * 10);
+    res(randomInt);
+  }, 4000);
+});
+
+promise.then(function(data) {
+  console.log(`Random int passed to resolve: ${data}`);
+});
