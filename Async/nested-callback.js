@@ -12,3 +12,8 @@ setTimeout(() => {
     }, 3000);
   }, 2000);
 }, 1000);
+
+// Disadvantages of Nested Callbacks
+// The code is hard to read
+// Logic is difficult to reason about
+// the code is not modular
