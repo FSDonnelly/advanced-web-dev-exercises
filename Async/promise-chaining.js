@@ -2,7 +2,7 @@ let promise = new Promise((res, rej) => {
   setTimeout(() => {
     randomInt = Math.floor(Math.random() * 10);
     res(randomInt);
-  }, 500);
+  }, 3000);
 });
 
 promise
@@ -11,7 +11,7 @@ promise
     return new Promise((res, rej) => {
       setTimeout(() => {
         res(Math.floor(Math.random() * 10));
-      }, 3000);
+      }, 500);
     });
   })
   .then(data => {
