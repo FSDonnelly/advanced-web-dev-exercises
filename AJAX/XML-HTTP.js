@@ -2,12 +2,10 @@ var XHR = new XMLHttpRequest();
 
 XHR.onreadystatechange = function() {
   console.log(`Ready State is... ${XHR.readyState}`);
-  if (XHR.readyState == 4) {
-    if (XHR.status == 200) {
-      console.log(XHR.responseText);
-    } else {
-      console.log("There was a problem!");
-    }
+  if (XHR.readyState == 4 && XHR.status == 200) {
+    console.log(XHR.responseText);
+  } else {
+    console.log("There was a problem!");
   }
 };
 
