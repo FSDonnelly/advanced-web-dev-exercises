@@ -1,4 +1,5 @@
 let btn = document.querySelector("#btn");
+let img = document.querySelector("#photo");
 
 // listen for clicks
 btn.addEventListener("click", () => {
@@ -7,8 +8,8 @@ btn.addEventListener("click", () => {
 
   XHR.onreadystatechange = () => {
     if (XHR.readyState == 4 && XHR.status == 200) {
-      let data = JSON.parse(XHR.responseText);
-      console.log(data);
+      let url = JSON.parse(XHR.responseText).message;
+      img.src = url;
     }
   };
 
