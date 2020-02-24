@@ -9,8 +9,8 @@ btn.addEventListener("click", () => {
 
   XHR.onreadystatechange = () => {
     if (XHR.readyState == 4 && XHR.status == 200) {
-      let currentRate = JSON.parse(XHR.responseText).bpi.USD.rate_float;
-      price = currentRate;
+      let currentRate = JSON.parse(XHR.responseText).bpi.USD.rate;
+      price.innerText = "$" + currentRate + " USD";
     }
   };
 
