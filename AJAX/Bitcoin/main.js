@@ -18,10 +18,18 @@ btn.addEventListener("click", () => {
   // XHR.send();
 
   // Make fetch request
-  fetch(url).then(response => {
-    console.log(response);
-    return response.json().then(data => {
-      console.log(data);
+  fetch(url)
+    .then(response => {
+      console.log(response);
+      if (response.status === 200) {
+        return response.json();
+      } else {
+        console.log(`SOmething went wrong.. Status: ${response.status}`);
+      }
+    })
+    .then(data => {
+      console.log(data.bpi.USD.rate);
+      let currentRate = data.bpi.USD.rate;
+      price.innerText = "$" + currentRate + " USD";
     });
-  });
 });
