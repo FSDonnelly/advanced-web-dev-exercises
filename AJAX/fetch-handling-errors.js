@@ -1,6 +1,7 @@
-var btn = document.querySelector("button");
-btn.addEventListener("click", function() {
-  var url = "https://api.github.com/users/coltasdas";
+let btn1 = document.querySelector("#btn1");
+let btn2 = document.querySelector("#btn2");
+btn2.addEventListener("click", function() {
+  let url = "https://api.github.com/users/FSDonnelly";
   fetch(url)
     .then(handleErrors)
     .then(function(request) {
@@ -8,7 +9,20 @@ btn.addEventListener("click", function() {
       console.log(request);
     })
     .catch(function(error) {
-      console.log(error);
+      console.log(`There was a problem... error: ${error}`);
+    });
+});
+
+btn1.addEventListener("click", function() {
+  let url = "https://api.github.com/users/FSDonnellyhsh";
+  fetch(url)
+    .then(handleErrors)
+    .then(function(request) {
+      console.log("EVERYTHING IS FINE!");
+      console.log(request);
+    })
+    .catch(function(error) {
+      console.log(`There was a problem... error: ${error}`);
     });
 });
 
