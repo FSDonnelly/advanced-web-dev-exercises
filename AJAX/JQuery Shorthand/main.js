@@ -1,30 +1,30 @@
-$("#getBtn").click(function() {
+$("#getBtn").click(() => {
   $.get("https://api.github.com/users/FSDonnelly")
-    .done(function(data) {
+    .done(data => {
       console.log(data);
     })
-    .fail(function() {
+    .fail(() => {
       console.log("ERROR!");
     });
 });
 
-$("#postBtn").click(function() {
-  var data = { name: "Charlie", city: "Florence" };
+$("#postBtn").click(() => {
+  let data = { name: "Charlie", city: "Florence" };
   $.post("www.catsarecoolandsoaredogs.com", data)
-    .done(function(data) {
+    .done(data => {
       console.log("HI!");
     })
-    .fail(function() {
+    .fail(() => {
       console.log("ERROR!");
     });
 });
 
-$("#getJSONBtn").click(function() {
+$("#getJSONBtn").click(() => {
   $.getJSON("https://api.github.com/users/FSDonnelly")
-    .done(function(data) {
+    .done(data => {
       console.log(data);
     })
-    .fail(function() {
+    .fail(() => {
       console.log("PROBLEM!");
     });
 });
