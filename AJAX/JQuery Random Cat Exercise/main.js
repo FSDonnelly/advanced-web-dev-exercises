@@ -1,9 +1,9 @@
-$("#btn").click(function() {
+$("#btn").click(() => {
   $.getJSON("http://aws.random.cat/meow")
-    .done(function(data) {
+    .done(data => {
       $("#catImg").attr("src", data.file);
     })
-    .fail(function() {
+    .fail(() => {
       alert("REQUEST IS NOT PAWSIBBLE");
     });
 });
