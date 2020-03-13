@@ -13,19 +13,19 @@ function sendRequest() {
     .catch(handleErrors);
 }
 
-function addComments(res) {
-  res.data.forEach(function(comment) {
+addComments = res => {
+  res.data.forEach(comment => {
     appendComment(comment);
   });
-}
+};
 
-function appendComment(comment) {
+appendComment = comment => {
   let newP = document.createElement("p");
   newP.innerText = comment.email;
   section.appendChild(newP);
-}
+};
 
-function handleErrors(err) {
+handleErrors = err => {
   if (err.response) {
     console.log("Problem With Response ", err.response.status);
   } else if (err.request) {
@@ -33,4 +33,4 @@ function handleErrors(err) {
   } else {
     console.log("Error", err.message);
   }
-}
+};
