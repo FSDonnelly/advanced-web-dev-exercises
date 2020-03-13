@@ -1,5 +1,5 @@
-var btn = document.querySelector("button");
-var section = document.querySelector("#comments");
+let btn = document.querySelector("button");
+let section = document.querySelector("#comments");
 btn.addEventListener("click", sendRequest);
 
 function sendRequest() {
@@ -20,7 +20,7 @@ function addComments(res) {
 }
 
 function appendComment(comment) {
-  var newP = document.createElement("p");
+  let newP = document.createElement("p");
   newP.innerText = comment.email;
   section.appendChild(newP);
 }
