@@ -42,3 +42,7 @@ button:hover {
   color: white;
   background: #1abc9c;
 }
+
+p {
+  margin-top: 20px;
+}
