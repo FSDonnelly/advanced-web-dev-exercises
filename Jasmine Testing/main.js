@@ -47,3 +47,18 @@ describe("Pending specs", () => {
     pending();
   });
 });
+
+add = (a, b, c) => {
+  return a + b + c;
+};
+
+describe("add", () => {
+  let addSpy, resulty;
+  beforeEach(() => {
+    addSpy = spyOn(window, "add");
+    result = addSpy();
+  });
+  it("is can have params tested", () => {
+    expect(addSpy).toHaveBeenCalled();
+  });
+});
