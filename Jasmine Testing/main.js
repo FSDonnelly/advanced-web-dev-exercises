@@ -55,11 +55,14 @@ add = (a, b, c) => {
 describe("add", () => {
   let addSpy, resulty;
   beforeEach(() => {
-    addSpy = spyOn(window, "add");
+    addSpy = spyOn(window, "add").and.callThrough();
     result = addSpy(1, 2, 3);
   });
   it("is can have params tested", () => {
     expect(addSpy).toHaveBeenCalled();
     expect(addSpy).toHaveBeenCalledWith(1, 2, 3);
+  });
+  it("can have a return value tested", () => {
+    expect(result).toEqual(6);
   });
 });
