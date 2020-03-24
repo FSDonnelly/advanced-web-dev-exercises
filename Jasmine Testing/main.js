@@ -53,10 +53,14 @@ add = (a, b, c) => {
 };
 
 describe("add", () => {
-  let addSpy, resulty;
+  let addSpy, result;
   beforeEach(() => {
     addSpy = spyOn(window, "add").and.callThrough();
     result = addSpy(1, 2, 3);
+  });
+  it("is can have frequency tested", () => {
+    expect(addSpy.calls.any()).toBe(true);
+    expect(addSpy.calls.count()).toBe(1);
   });
   it("is can have params tested", () => {
     expect(addSpy).toHaveBeenCalled();
