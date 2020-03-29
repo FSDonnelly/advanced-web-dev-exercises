@@ -70,3 +70,25 @@ describe("add", () => {
     expect(result).toEqual(6);
   });
 });
+
+describe("a simple setTimeout", () => {
+  let sample;
+  beforeEach(() => {
+    sample = jasmine.createSpy("sampleFunction");
+    jasmine.clock().install();
+  });
+
+  afterEach(() => {
+    jasmine.clock().uninstall();
+  });
+
+  it("is only invoked after 1000 milliseconds", () => {
+    setTimeout(() => {
+      sample();
+    }, 1000);
+    jasmine.clock().tick(999);
+    expect(sample).not.toHaveBeenCalled();
+    jasmine.clock().tick(1);
+    expect(sample).toHaveBeenCalled();
+  });
+});
