@@ -92,3 +92,40 @@ describe("a simple setTimeout", () => {
     expect(sample).toHaveBeenCalled();
   });
 });
+
+describe("a simple setInterval", () => {
+  let dummy;
+  beforeEach(() => {
+    dummy = jasmine.createSpy("dummyFunction");
+    jasmine.clock().install();
+  });
+
+  afterEach(() => {
+    jasmine.clock().uninstall();
+  });
+
+  it("checks to see the number of times the function is invoked", () => {
+    setInterval(() => {
+      dummy();
+    }, 1000);
+    jasmine.clock().tick(999);
+    expect(dummy.calls.count()).toBe(0);
+    jasmine.clock().tick(1000);
+    expect(dummy.calls.count()).toBe(1);
+    jasmine.clock().tick(1);
+    expect(dummy.calls.count()).toBe(2);
+  });
+});
+
+getUserInfo = username => {
+  return $.getJSON(`https://api.github.com/users/${username}`);
+};
+
+describe("#getUserInfo", () => {
+  it("returns the correct name for the user", done => {
+    getUserInfo("FSDonnelly").then(data => {
+      expect(data.name).toBe("Frank Donnelly");
+      done();
+    });
+  });
+});
