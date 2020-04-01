@@ -9,3 +9,13 @@ forEach = (array, callback) => {
     callback(array[i], i, array);
   }
 };
+
+halfValues = arr => {
+  let newArr = [];
+  arr.forEach(val => {
+    newArr.push(val / 2);
+  });
+  console.log(newArr);
+};
+
+halfValues([8, 10, 12]);
