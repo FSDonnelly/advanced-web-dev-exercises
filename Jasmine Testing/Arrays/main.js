@@ -19,3 +19,14 @@ halfValues = arr => {
 };
 
 halfValues([8, 10, 12]);
+
+doubleValues = arr => {
+  let newArr = [];
+  arr.forEach(val => {
+    newArr.push(val * 2);
+  });
+  console.log(newArr);
+};
+
+doubleValues([1, 2, 3]);
+doubleValues([5, 1, 2, 3, 10]);
