@@ -1,5 +1,6 @@
 let arr = [1, 2, 3];
 
+// forEach Examples and Exercizes
 arr.forEach((value, index, array) => {
   console.log(value);
 });
@@ -90,3 +91,11 @@ vowelCount("Tim"); // {i:1};
 vowelCount("Matt"); // {a:1})
 vowelCount("hmmm"); // {};
 vowelCount("I Am awesome and so are you"); // {i: 1, a: 4, e: 3, o: 3, u: 1};
+
+// Map Examples and Exercizes
+
+let mapArr = [1, 2, 3];
+
+mapArr.map((value, index, array) => {
+  console.log(value * 2);
+});
