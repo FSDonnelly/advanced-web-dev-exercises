@@ -31,24 +31,59 @@ doubleValues = arr => {
 doubleValues([1, 2, 3]);
 doubleValues([5, 1, 2, 3, 10]);
 
-onlyEvenValues = arr => {};
+onlyEvenValues = arr => {
+  let newArr = [];
+  arr.forEach(val => {
+    if (val % 2 === 0) {
+      newArr.push(val);
+    }
+  });
+  console.log(newArr);
+};
 
 onlyEvenValues([1, 2, 3]);
 onlyEvenValues([5, 1, 2, 3, 10]);
 
-showFirstAndLast = arr => {};
+showFirstAndLast = arr => {
+  let newArr = [];
+  arr.forEach(val => {
+    newArr.push(val[0] + val[val.length - 1]);
+  });
+  console.log(newArr);
+};
 
 showFirstAndLast(["colt", "matt", "tim", "udemy"]);
 showFirstAndLast(["hi", "goodbye", "smile"]);
 
-addKeyAndValue = (arr, key, value) => {};
+addKeyAndValue = (arr, key, value) => {
+  arr.forEach(val => {
+    val[key] = value;
+  });
+  console.log(arr);
+};
+
 addKeyAndValue(
   [{ name: "Elie" }, { name: "Tim" }, { name: "Matt" }, { name: "Colt" }],
   "title",
   "instructor"
 );
 
-vowelCount = str => {};
+vowelCount = str => {
+  let splitArr = str.split("");
+  let obj = {};
+  let vowels = "aeiou";
+
+  splitArr.forEach(letter => {
+    if (vowels.indexOf(letter.toLowerCase()) !== -1) {
+      if (letter in obj) {
+        obj[letter]++;
+      } else {
+        obj[letter] = 1;
+      }
+    }
+  });
+  console.log(obj);
+};
 
 vowelCount("Elie"); // {e:2,i:1};
 vowelCount("Tim"); // {i:1};
