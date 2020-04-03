@@ -94,8 +94,12 @@ vowelCount("I Am awesome and so are you"); // {i: 1, a: 4, e: 3, o: 3, u: 1};
 
 // Map Examples and Exercizes
 
-let mapArr = [1, 2, 3];
+mapArr = arr => {
+  let newArr = [];
+  arr.map((value, index, array) => {
+    newArr.push(value * 2);
+  });
+  console.log(newArr);
+};
 
-mapArr.map((value, index, array) => {
-  console.log(value * 2);
-});
+mapArr([1, 2, 3]);
