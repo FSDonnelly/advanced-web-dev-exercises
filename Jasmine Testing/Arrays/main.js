@@ -103,3 +103,11 @@ mapArr = arr => {
 };
 
 mapArr([1, 2, 3]);
+
+tripleValues = arr => {
+  return arr.map(value => {
+    console.log(value * 3);
+  });
+};
+
+tripleValues([1, 2, 3]);
