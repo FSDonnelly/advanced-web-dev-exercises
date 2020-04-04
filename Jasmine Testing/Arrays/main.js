@@ -111,3 +111,18 @@ tripleValues = arr => {
 };
 
 tripleValues([1, 2, 3]);
+
+onlyFirstName = arr => {
+  let newArr = [];
+  arr.map(val => {
+    console.log(val.first);
+    newArr.push(val.first);
+  });
+  console.log(newArr);
+};
+
+onlyFirstName([
+  { first: "Tim", last: "Garcia" },
+  { first: "Matt", last: "Lane" },
+  { first: "Frank", last: "Tank" }
+]);
