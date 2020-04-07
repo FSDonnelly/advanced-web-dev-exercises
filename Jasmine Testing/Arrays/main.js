@@ -1,6 +1,6 @@
 let arr = [1, 2, 3];
 
-// forEach Examples and Exercizes
+//--- forEach Examples and Exercizes ---//
 arr.forEach((value, index, array) => {
   console.log(value);
 });
@@ -11,9 +11,9 @@ forEach = (array, callback) => {
   }
 };
 
-halfValues = arr => {
+halfValues = (arr) => {
   let newArr = [];
-  arr.forEach(val => {
+  arr.forEach((val) => {
     newArr.push(val / 2);
   });
   console.log(newArr);
@@ -21,9 +21,9 @@ halfValues = arr => {
 
 halfValues([8, 10, 12]);
 
-doubleValues = arr => {
+doubleValues = (arr) => {
   let newArr = [];
-  arr.forEach(val => {
+  arr.forEach((val) => {
     newArr.push(val * 2);
   });
   console.log(newArr);
@@ -32,9 +32,9 @@ doubleValues = arr => {
 doubleValues([1, 2, 3]);
 doubleValues([5, 1, 2, 3, 10]);
 
-onlyEvenValues = arr => {
+onlyEvenValues = (arr) => {
   let newArr = [];
-  arr.forEach(val => {
+  arr.forEach((val) => {
     if (val % 2 === 0) {
       newArr.push(val);
     }
@@ -45,9 +45,9 @@ onlyEvenValues = arr => {
 onlyEvenValues([1, 2, 3]);
 onlyEvenValues([5, 1, 2, 3, 10]);
 
-showFirstAndLast = arr => {
+showFirstAndLast = (arr) => {
   let newArr = [];
-  arr.forEach(val => {
+  arr.forEach((val) => {
     newArr.push(val[0] + val[val.length - 1]);
   });
   console.log(newArr);
@@ -57,7 +57,7 @@ showFirstAndLast(["colt", "matt", "tim", "udemy"]);
 showFirstAndLast(["hi", "goodbye", "smile"]);
 
 addKeyAndValue = (arr, key, value) => {
-  arr.forEach(val => {
+  arr.forEach((val) => {
     val[key] = value;
   });
   console.log(arr);
@@ -69,12 +69,12 @@ addKeyAndValue(
   "instructor"
 );
 
-vowelCount = str => {
+vowelCount = (str) => {
   let splitArr = str.split("");
   let obj = {};
   let vowels = "aeiou";
 
-  splitArr.forEach(letter => {
+  splitArr.forEach((letter) => {
     if (vowels.indexOf(letter.toLowerCase()) !== -1) {
       if (letter in obj) {
         obj[letter]++;
@@ -92,9 +92,9 @@ vowelCount("Matt"); // {a:1})
 vowelCount("hmmm"); // {};
 vowelCount("I Am awesome and so are you"); // {i: 1, a: 4, e: 3, o: 3, u: 1};
 
-// Map Examples and Exercizes
+//--- Map Examples and Exercizes ---//
 
-mapArr = arr => {
+mapArr = (arr) => {
   let newArr = [];
   arr.map((value, index, array) => {
     newArr.push(value * 2);
@@ -104,17 +104,17 @@ mapArr = arr => {
 
 mapArr([1, 2, 3]);
 
-tripleValues = arr => {
-  return arr.map(value => {
+tripleValues = (arr) => {
+  return arr.map((value) => {
     console.log(value * 3);
   });
 };
 
 tripleValues([1, 2, 3]);
 
-onlyFirstName = arr => {
+onlyFirstName = (arr) => {
   let newArr = [];
-  arr.map(val => {
+  arr.map((val) => {
     console.log(val.first);
     newArr.push(val.first);
   });
@@ -124,7 +124,7 @@ onlyFirstName = arr => {
 onlyFirstName([
   { first: "Tim", last: "Garcia" },
   { first: "Matt", last: "Lane" },
-  { first: "Frank", last: "Tank" }
+  { first: "Frank", last: "Tank" },
 ]);
 
 /*
@@ -137,7 +137,7 @@ Examples:
 
 function doubleValues(arr) {
   let newArr = [];
-  arr.map(value => {
+  arr.map((value) => {
     console.log(value * 2);
     newArr.push(value * 2);
   });
@@ -173,7 +173,7 @@ Examples:
 
 function extractKey(arr, key) {
   let newArr = [];
-  arr.map(key => {
+  arr.map((key) => {
     console.log(key.name);
     newArr.push(key.name);
   });
@@ -192,7 +192,7 @@ Examples:
 
 function extractFullName(arr) {
   let newArr = [];
-  arr.map(key => {
+  arr.map((key) => {
     console.log(`${key.first} ${key.last}`);
     newArr.push(`${key.first} ${key.last}`);
   });
@@ -202,5 +202,10 @@ extractFullName([
   { first: "Elie", last: "Schoppik" },
   { first: "Tim", last: "Garcia" },
   { first: "Matt", last: "Lane" },
-  { first: "Colt", last: "Steele" }
+  { first: "Colt", last: "Steele" },
 ]); // ['Elie Schoppik', 'Tim Garcia', 'Matt Lane', 'Colt Steele']
+
+//--- Filter Examples and Exercizes ---//
+arr.filter((value, index, array) => {
+  console.log(value > 2);
+});
