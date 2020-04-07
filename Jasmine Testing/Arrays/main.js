@@ -209,3 +209,14 @@ extractFullName([
 arr.filter((value, index, array) => {
   console.log(value > 2);
 });
+
+let instructors = [
+  { name: "Elie" },
+  { name: "Tim" },
+  { name: "Matt" },
+  { name: "Colt" },
+];
+
+instructors.filter((value, index, array) => {
+  console.log(value.name > 3);
+});
