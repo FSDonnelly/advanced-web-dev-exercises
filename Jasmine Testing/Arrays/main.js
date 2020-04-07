@@ -218,5 +218,25 @@ let instructors = [
 ];
 
 instructors.filter((value, index, array) => {
-  console.log(value.name > 3);
+  console.log(value.name.length > 3);
 });
+
+function filter(array, callback) {
+  let newArr = [];
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    if (callback(element, i, array)) {
+      newArr.push(element);
+    }
+  }
+  console.log(newArr);
+}
+
+function onlyFourLetterNames(arr) {
+  let newArr = [];
+  return arr.filter((value) => {
+    newArr.push(value.length === 4);
+    console.log(newArr);
+  });
+}
+onlyFourLetterNames(["Rusty", "Matt", "Moxie", "Colt"]);
