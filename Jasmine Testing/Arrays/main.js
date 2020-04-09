@@ -237,6 +237,16 @@ function onlyFourLetterNames(arr) {
   return arr.filter((value) => {
     newArr.push(value.length === 4);
     console.log(newArr);
+    return value.length === 4;
   });
 }
 onlyFourLetterNames(["Rusty", "Matt", "Moxie", "Colt"]);
+
+function divisibleByThree(arr) {
+  return arr.filter((value) => {
+    console.log(value % 3 === 0);
+    return value % 3 === 0;
+  });
+}
+
+divisibleByThree([1, 2, 3, 4, 5, 6, 7, 8, 9]);
