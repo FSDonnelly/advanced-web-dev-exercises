@@ -1,11 +1,11 @@
-let someArr = [1, 2, 3];
+let arr = [1, 2, 3];
 
-someArr.some((value, index, array) => {
+arr.some((value, index, array) => {
   console.log(value < 2);
   return value < 2;
 });
 
-console.log(someArr);
+console.log(arr);
 function some(array, callback) {
   for (let i = 0; i < array.length; i++) {
     if (callback(array[i], i, array)) {
@@ -20,7 +20,11 @@ function hasEvenNumber(arr) {
     return value % 2 === 0;
   });
 }
-console.log(arr);
+// console.log(arr);
+let evenArr = [1, 2, 3, 4];
+hasEvenNumber(evenArr);
+console.log(evenArr);
 
-hasEvenNumber([1, 2, 3, 4]);
-hasEvenNumber([1, 3, 5]);
+let oddArr = [1, 3, 5];
+hasEvenNumber(oddArr);
+console.log(oddArr);
