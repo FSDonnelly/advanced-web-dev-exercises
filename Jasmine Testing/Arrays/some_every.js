@@ -23,8 +23,5 @@ function hasEvenNumber(arr) {
 // console.log(arr);
 let evenArr = [1, 2, 3, 4];
 hasEvenNumber(evenArr);
-console.log(evenArr);
-
 let oddArr = [1, 3, 5];
 hasEvenNumber(oddArr);
-console.log(oddArr);
