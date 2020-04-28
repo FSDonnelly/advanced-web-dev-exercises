@@ -22,6 +22,11 @@ function vowelCount(str) {
     }, {});
 }
 
-function addKeyAndValue(arr, key, value) {}
+function addKeyAndValue(arr, key, value) {
+  return arr.reduce(function (acc, next, idx) {
+    acc[idx][key] = value;
+    return acc;
+  }, arr);
+}
 
 function partition(arr, callback) {}
