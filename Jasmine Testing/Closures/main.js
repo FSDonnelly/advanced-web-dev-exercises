@@ -10,3 +10,5 @@ outerFn = () => {
 
 let outer = outerFn();
 outer();
+// Closure: exists when an inner function makes use of variables defined in an outer function that has returned
+//  Closure is used to keep private variables private (unable to be modified from an externally)
