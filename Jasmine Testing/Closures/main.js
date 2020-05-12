@@ -53,3 +53,4 @@ let first = classRoom();
 first.getInstructors();
 first.addInstructor("Matt");
 first.getInstructors();
+first.addInstructor("Tim");
