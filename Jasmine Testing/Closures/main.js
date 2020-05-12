@@ -23,10 +23,15 @@ counter = () => {
 
 let counter1 = counter();
 console.log(counter1);
-counter1();
-counter1();
+counter1(); // 1
+counter1(); // 2
 let counter2 = counter();
 console.log(counter2);
-counter2();
-counter2();
+counter2(); // 1
+counter2(); // 2
+
+counter1(); // 3 not affected by counter2
+
+count; // undefined
+
 // counter2 DOES NOT modify counter1 because they have their own private count variable
