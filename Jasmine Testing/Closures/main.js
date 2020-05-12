@@ -32,6 +32,24 @@ counter2(); // 2
 
 counter1(); // 3 not affected by counter2
 
-count; // undefined
+// count; // undefined
 
 // counter2 DOES NOT modify counter1 because they have their own private count variable
+
+classRoom = () => {
+  let instructors = ["Ellie", "Colt"];
+  return {
+    getInstructors: () => {
+      return console.log(instructors);
+    },
+    addInstructor: (instructor) => {
+      instructors.push(instructor);
+      return console.log(instructors);
+    },
+  };
+};
+
+let first = classRoom();
+first.getInstructors();
+first.addInstructor("Matt");
+first.getInstructors();
