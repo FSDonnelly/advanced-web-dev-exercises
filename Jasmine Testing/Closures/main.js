@@ -12,3 +12,21 @@ let outer = outerFn();
 outer();
 // Closure: exists when an inner function makes use of variables defined in an outer function that has returned
 //  Closure is used to keep private variables private (unable to be modified from an externally)
+
+counter = () => {
+  let count = 0;
+  return (inner = () => {
+    count++;
+    return console.log(count);
+  });
+};
+
+let counter1 = counter();
+console.log(counter1);
+counter1();
+counter1();
+let counter2 = counter();
+console.log(counter2);
+counter2();
+counter2();
+// counter2 DOES NOT modify counter1 because they have their own private count variable
