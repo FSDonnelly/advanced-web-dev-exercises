@@ -8,7 +8,14 @@ Examples:
     specialMultiply(3); // function(){}....
 */
 
-function specialMultiply(a, b) {}
+function specialMultiply(a, b) {
+  if (arguments.length === 1) {
+    return function (b) {
+      return a * b;
+    };
+  }
+  return a * b;
+}
 
 /* 
 Write a function called guessingGame which takes in one parameter amount. The function should return another function that takes in a parameter called guess. In the outer function, you should create a variable called answer which is the result of a random number between 0 and 10 as well as a variable called guesses which should be set to 0.
