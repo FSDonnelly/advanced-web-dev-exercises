@@ -40,4 +40,24 @@ Examples (yours might not be like this, since the answer is random every time):
     game2(1) // "You are all done playing!"
 */
 
-function guessingGame(amount) {}
+function guessingGame(amount) {
+  var answer = Math.floor(Math.random() * 11);
+  var guesses = 0;
+  var completed = false;
+  return function (guess) {
+    if (!completed) {
+      guesses++;
+      if (guess === answer) {
+        completed = true;
+        return "You got it!";
+      } else if (guesses === amount) {
+        completed = true;
+        return "No more guesses the answer was " + answer;
+      } else if (guess > answer) return "Your guess is too high!";
+      else if (guess < answer) return "Your guess is too low!";
+    }
+    return "You are all done playing!";
+  };
+}
+var game2 = guessingGame(3);
+console.log(game2(5));
