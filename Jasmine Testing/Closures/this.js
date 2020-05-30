@@ -29,3 +29,21 @@ firstFunction = () => {
 
 console.log(firstFunction);
 firstFunction();
+
+let colt = {
+  firstName: "Colt",
+  sayHi: function () {
+    return `Hi ${this.firstName}`;
+  },
+};
+
+let elie = {
+  firstName: "Elie",
+  // sayHi: function () {
+  //   return `Hi ${this.firstName}`;
+  // },
+};
+
+console.log(colt.sayHi());
+// console.log(elie.sayHi());
+console.log(colt.sayHi.call(elie));
