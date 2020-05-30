@@ -30,11 +30,12 @@ firstFunction = () => {
 console.log(firstFunction);
 firstFunction();
 
+function sayHi() {
+  return `Hi ${this.firstName}`;
+}
+
 let colt = {
   firstName: "Colt",
-  sayHi: function () {
-    return `Hi ${this.firstName}`;
-  },
 };
 
 let elie = {
@@ -43,7 +44,8 @@ let elie = {
   //   return `Hi ${this.firstName}`;
   // },
 };
-
-console.log(colt.sayHi());
+console.log(sayHi.call(colt));
+console.log(sayHi.call(elie));
+// console.log(colt.sayHi());
 // console.log(elie.sayHi());
-console.log(colt.sayHi.call(elie));
+// console.log(colt.sayHi.call(elie));
