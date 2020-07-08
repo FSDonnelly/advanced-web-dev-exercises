@@ -244,4 +244,11 @@ Examples:
 
 */
 
-function flip(fn, thisArg) {}
+function flip(fn, thisArg) {
+  let outerArgs = [].slice.call(arguments, 2);
+  return function () {
+    let innerArgs = [].slice.call(arguments);
+    let allArgs = outerArgs.concat(innerArgs).slice(0, fn.length);
+    return fn.apply(thisArg, allArgs.reverse());
+  };
+}
