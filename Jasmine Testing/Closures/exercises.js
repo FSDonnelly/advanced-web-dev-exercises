@@ -113,7 +113,16 @@ Examples:
 
 */
 
-function invokeMax(fn, num) {}
+function invokeMax(fn, num) {
+  let max = 0;
+  return function () {
+    if (max >= num) {
+      return "Maxed Out!";
+    }
+    max++;
+    return fn.apply(this, arguments);
+  };
+}
 
 /* 
 Write a function called once which accepts two parameters, a function and a value for the keyword 'this'. Once should return a new function that can only be invoked once, with the value of the keyword this in the function set to be the second parameter.
@@ -141,7 +150,15 @@ Examples:
 
 */
 
-function once(fn, thisArg) {}
+function once(fn, thisArg) {
+  let hasBennCalled = false;
+  return function () {
+    if (!hasBennCalled) {
+      hasBennCalled = true;
+      return fn.apply(thisArg, arguments);
+    }
+  };
+}
 
 // BONUSES!
 
@@ -177,7 +194,14 @@ Examples:
 
 */
 
-function bind(fn, thisArg) {}
+function bind(fn, thisArg) {
+  let outerArgs = [].slice.call(arguments, 2);
+  return function () {
+    let innerArgs = [].slice.call(arguments);
+    let allArgs = outerArgs.concat(innerArgs);
+    return fn.apply(thisArg, allArgs);
+  };
+}
 
 /* 
 Write a function called flip which accepts a function and a value for the keyword this. Flip should return a new function that when invoked, will invoke the function passed to flip with the correct value of the keyword this and all of the arguments passed to the function REVERSED. HINT - if you pass more than two parameters to flip, those parameters should be included as parameters to the inner function when it is invoked. You will have to make use of closure! 
