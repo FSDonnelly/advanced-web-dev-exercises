@@ -73,7 +73,9 @@ Examples:
     converted.reduce // function(){}....
 */
 
-function arrayFrom(arrayLikeObject) {}
+function arrayFrom(arrayLikeObject) {
+  return [].slice.call(arrayLikeObject);
+}
 
 /* 
 // Write a function called sumEvenArguments which takes all of the arguments passed to a function and returns the sum of the even ones.
@@ -84,7 +86,15 @@ Examples:
     sumEvenArguments(1,2) // 2
 */
 
-function sumEvenArguments() {}
+function sumEvenArguments() {
+  let newArgs = [].slice.call(arguments);
+  return newArgs.reduce(function (acc, next) {
+    if (next % 2 === 0) {
+      return acc + next;
+    }
+    return acc;
+  }, 0);
+}
 
 /* 
 Write a function called invokeMax which accepts a function and a maximum amount. invokeMax should return a function that when called increments a counter. If the counter is greater than the maximum amount, the inner function should return "Maxed Out"
