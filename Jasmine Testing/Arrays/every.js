@@ -1,7 +1,7 @@
 // Every Exercises //
 
-let arr = [-1, -2, -3];
+let everyArr = [-1, -2, -3];
 
-arr.every((value, index, array) => {
+everyArr.every((value, index, array) => {
   return value < 0;
 });

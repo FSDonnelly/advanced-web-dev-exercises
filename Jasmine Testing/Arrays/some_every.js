@@ -1,11 +1,11 @@
-let arr = [1, 2, 3];
+let someEveryArr = [1, 2, 3];
 
-arr.some((value, index, array) => {
+someEveryArr.some((value, index, array) => {
   console.log(value < 2);
   return value < 2;
 });
 
-console.log(arr);
+console.log(someEveryArr);
 function some(array, callback) {
   for (let i = 0; i < array.length; i++) {
     if (callback(array[i], i, array)) {
@@ -15,8 +15,8 @@ function some(array, callback) {
   return false;
 }
 
-function hasEvenNumber(arr) {
-  return arr.some((value) => {
+function hasEvenNumber(someEveryArr) {
+  return someEveryArr.some((value) => {
     return value % 2 === 0;
   });
 }
@@ -28,8 +28,8 @@ hasEvenNumber(oddArr);
 
 // SOME_EVERY EXERCISE //
 
-function hasOddNumber(arr) {
-  return arr.some(function (val) {
+function hasOddNumber(someEveryArr) {
+  return someEveryArr.some(function (val) {
     return val % 2 !== 0;
   });
 }
@@ -43,26 +43,26 @@ function hasAZero(num) {
     });
 }
 
-function hasOnlyOddNumbers(arr) {
-  return arr.every(function (val) {
+function hasOnlyOddNumbers(someEveryArr) {
+  return someEveryArr.every(function (val) {
     return val % 2 !== 0;
   });
 }
 
-function hasNoDuplicates(arr) {
-  return arr.every(function (val) {
-    return arr.indexOf(val) === arr.lastIndexOf(val);
+function hasNoDuplicates(someEveryArr) {
+  return someEveryArr.every(function (val) {
+    return someEveryArr.indexOf(val) === someEveryArr.lastIndexOf(val);
   });
 }
 
-function hasCertainKey(arr, key) {
-  return arr.every(function (val) {
+function hasCertainKey(someEveryArr, key) {
+  return someEveryArr.every(function (val) {
     return key in val;
   });
 }
 
-function hasCertainValue(arr, key, searchValue) {
-  return arr.every(function (val) {
+function hasCertainValue(someEveryArr, key, searchValue) {
+  return someEveryArr.every(function (val) {
     return val[key] === searchValue;
   });
 }
